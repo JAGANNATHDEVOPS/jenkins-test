@@ -6,7 +6,7 @@ pipeline {
             steps {
                     withKubeConfig(caCertificate: '', clusterName: '', contextName: '', credentialsId: 'kubernetes-credentials', namespace: '', restrictKubeConfigAccess: false, serverUrl: '')
                     {
-                        sh 'kubectl get nodes';
+                        sh 'sudo kubectl get nodes';
 sh 'kubectl --version'
                     }
             }
