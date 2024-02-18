@@ -1,0 +1,11 @@
+pipeline {
+    agent any
+
+    stages {
+        stage('RUN KUBECTL COMMAND') {
+            steps {
+                sh 'kubectl get ns'
+            }
+        }
+    }
+}
