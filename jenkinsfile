@@ -4,12 +4,10 @@ pipeline {
     stages {
         stage('RUN KUBECTL COMMAND') {
             steps {
-
                     withKubeConfig(caCertificate: '', clusterName: 'dev-eks', contextName: '', credentialsId: 'kubernetes-credentials', namespace: 'default', restrictKubeConfigAccess: false, serverUrl: '') 
                     {
                         sh 'kubectl get ns'
                     }
-
             }
         }
     }
